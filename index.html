@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -13,7 +14,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap">
 
-    <!-- Enlace al archivo CSS -->
+    <!-- Archivo CSS -->
     <link rel="stylesheet" href="estilo.css">
 
 </head>
@@ -85,6 +86,10 @@
 
         <p class="desc">Con patatas fritas</p>
 
+        <!-- CARRILLADA AL VINO -->
+        <img src="carrillada.jpg"
+             alt="Carrillada al vino">
+
         <div class="plato">
             <span>
                 Carrillada al vino
@@ -108,6 +113,10 @@
             <span>Tarta de queso</span>
             <span class="precio">3,80 €</span>
         </div>
+
+        <!-- FLAN CASERO -->
+        <img src="flan.jpg"
+             alt="Flan casero">
 
         <div class="plato">
             <span>
@@ -136,9 +145,10 @@
         Mi cuenta: <b id="total">0,00</b> €
     </div>
 
-    <!-- JAVASCRIPT DENTRO DEL HTML -->
+    <!-- JAVASCRIPT -->
     <script>
 
+        // SELECCIONAR LOS PLATOS Y EL BOTÓN
         const platos = document.querySelectorAll(".plato");
         const boton = document.getElementById("sorpresa");
 
@@ -171,9 +181,9 @@
 
                 total = total + parseFloat(texto.replace(",", "."));
 
-                document.get
-
-  };
+                document.getElementById("total").textContent =
+                    total.toFixed(2).replace(".", ",");
+            };
 
         });
 
