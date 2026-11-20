@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Taberna El Albero · Carta</title>
+
+    <!-- Fuente de los títulos -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap">
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header>
+        <h1>Taberna El Albero</h1>
+        <p>Cocina casera desde 1987</p>
+    </header>
+
+    <!-- BOTÓN SORPRESA -->
+    <button id="sorpresa">🎲 ¿Qué pido hoy?</button>
+    <p id="consejo"></p>
+
+    <!-- APARTADO DE TAPAS -->
+    <section>
+
+        <h2>Tapas</h2>
+
+        <img src="salmorejo.jpg"
+             alt="Salmorejo cordobés">
+
+        <div class="plato">
+            <span>Salmorejo cordobés</span>
+            <span class="precio">2,80 €</span>
+        </div>
+
+        <p class="desc">Con jamón y huevo duro</p>
+
+        <img src="croquetas.jpg"
+             alt="Croquetas caseras">
+
+        <div class="plato">
+            <span>Croquetas caseras</span>
+            <span class="precio">2,50 €</span>
+        </div>
+
+        <p class="desc">De puchero, 3 unidades</p>
+
+        <img class="foto-berenjenas"
+             src="Berenjenas.jpg"
+             alt="Berenjenas con miel">
+
+        <div class="plato">
+            <span>
+                Berenjenas con miel
+                <span class="tag veg">V</span>
+            </span>
+
+            <span class="precio">2,90 €</span>
+        </div>
+
+    </section>
+
+    <!-- APARTADO DE RACIONES -->
+    <section>
+
+        <h2>Raciones</h2>
+
+        <img src="flamenquin.jpg"
+             alt="Flamenquín">
+
+        <div class="plato">
+            <span>Flamenquín</span>
+            <span class="precio">11 €</span>
+        </div>
+
+        <p class="desc">Con patatas fritas</p>
+
+        <div class="plato">
+            <span>
+                Carrillada al vino
+                <span class="tag sg">SG</span>
+            </span>
+
+            <span class="precio">13 €</span>
+        </div>
+
+    </section>
+
+    <!-- APARTADO DE POSTRES -->
+    <section>
+
+        <h2>Postres</h2>
+
+        <img src="tarta.jpg"
+             alt="Tarta de queso">
+
+        <div class="plato">
+            <span>Tarta de queso</span>
+            <span class="precio">3,80 €</span>
+        </div>
+
+        <div class="plato">
+            <span>
+                Flan casero
+                <span class="tag sg">SG</span>
+            </span>
+
+            <span class="precio">3,00 €</span>
+        </div>
+
+    </section>
+
+    <!-- MENÚ DEL DÍA -->
+    <div class="menu">
+
+        <h2>Menú del día</h2>
+
+        <p>Primero + segundo + postre</p>
+
+        <p class="precio">12,50 €</p>
+
+    </div>
+
+    <!-- CUENTA -->
+    <div id="cuenta">
+        Mi cuenta: <b id="total">0,00</b> €
+    </div>
+
+    <!-- JAVASCRIPT DENTRO DEL HTML -->
+    <script>
+
+        const platos = document.querySelectorAll(".plato");
+        const boton = document.getElementById("sorpresa");
+
+        // ELEGIR UN PLATO ALEATORIO
+        boton.onclick = function () {
+
+            const n = Math.floor(Math.random() * platos.length);
+            const elegido = platos[n];
+
+            platos.forEach(function (p) {
+                p.classList.remove("elegido");
+            });
+
+            elegido.classList.add("elegido");
+
+            const nombre = elegido.querySelector("span").textContent;
+
+            document.getElementById("consejo").textContent =
+                "Hoy te recomiendo: " + nombre;
+        };
+
+        // SUMAR LOS PRECIOS A LA CUENTA
+        let total = 0;
+
+        platos.forEach(function (plato) {
+
+            plato.onclick = function () {
+
+                const texto = plato.querySelector(".precio").textContent;
+
+                total = total + parseFloat(texto.replace(",", "."));
+
+                document.get
+
+  };
+
+        });
+
+    </script>
+
+</body>
+</html>
