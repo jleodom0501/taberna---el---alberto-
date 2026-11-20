@@ -1,0 +1,62 @@
+
+.prueba {
+    color: #FFFFFF;
+}
+
+/* BOTÓN SORPRESA */
+#sorpresa {
+    display: block;
+    margin: 16px auto 0;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 999px;
+    background: #C9473B;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* CONSEJO */
+#consejo {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* PLATO ELEGIDO */
+.elegido {
+    background: #FFE9A8;
+    border-radius: 8px;
+}
+
+/* CUENTA */
+#cuenta {
+    position: sticky;
+    bottom: 0;
+    background: #1F2A26;
+    color: #FFE9A8;
+    padding: 14px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* PLATOS CLICABLES */
+.plato {
+    cursor: pointer;
+}
+
+/* TODAS LAS IMÁGENES */
+section img {
+    width: 100%;
+    max-width: 300px;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+}
+
+/* FOTO DE LAS BERENJENAS MÁS PEQUEÑA */
+section img.foto-berenjenas {
+    width: 180px;
+    height: 120px;
+}
