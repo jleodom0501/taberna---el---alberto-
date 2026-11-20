@@ -1,6 +1,136 @@
-
 .prueba {
     color: #FFFFFF;
+}
+
+/* DISEÑO GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #F5EBD8;
+    color: #1F2A26;
+    font-family: Arial, sans-serif;
+}
+
+/* CABECERA */
+header {
+    background: #1F2A26;
+    color: #FFE9A8;
+    text-align: center;
+    padding: 35px 15px;
+    border-bottom: 6px solid #C9473B;
+}
+
+header h1 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 48px;
+    margin: 0;
+}
+
+header p {
+    font-size: 17px;
+    margin: 8px 0 0;
+    color: #FFFFFF;
+}
+
+/* APARTADOS */
+section {
+    background: #FFF9EE;
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+section h2,
+.menu h2 {
+    font-family: 'Caveat Brush', cursive;
+    color: #C9473B;
+    font-size: 32px;
+    text-align: center;
+    border-bottom: 2px solid #E5C99A;
+    padding-bottom: 8px;
+}
+
+/* PLATOS Y PRECIOS */
+.plato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 5px;
+    border-bottom: 1px dashed #D8C5A7;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #C9473B;
+    white-space: nowrap;
+}
+
+.desc {
+    font-size: 14px;
+    color: #777;
+    margin: 3px 5px 15px;
+    font-style: italic;
+}
+
+/* TODAS LAS FOTOGRAFÍAS */
+section img {
+    width: 100%;
+    max-width: 300px;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+}
+
+/* BERENJENAS MÁS PEQUEÑAS */
+section img.foto-berenjenas {
+    width: 180px;
+    height: 120px;
+}
+
+/* ETIQUETAS */
+.tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.veg {
+    background: #D7EBCB;
+    color: #35652A;
+}
+
+.sg {
+    background: #E5DDF5;
+    color: #59447A;
+}
+
+/* MENÚ DEL DÍA */
+.menu {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 20px;
+    background: #FFE9A8;
+    border: 2px solid #C9473B;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.menu p {
+    font-size: 17px;
 }
 
 /* BOTÓN SORPRESA */
@@ -16,10 +146,15 @@
     cursor: pointer;
 }
 
+#sorpresa:hover {
+    background: #A9342B;
+}
+
 /* CONSEJO */
 #consejo {
     text-align: center;
     font-weight: bold;
+    color: #C9473B;
 }
 
 /* PLATO ELEGIDO */
@@ -39,24 +174,19 @@
     font-size: 18px;
 }
 
-/* PLATOS CLICABLES */
-.plato {
-    cursor: pointer;
-}
+/* ADAPTACIÓN A MÓVILES */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 38px;
+    }
 
-/* TODAS LAS IMÁGENES */
-section img {
-    width: 100%;
-    max-width: 300px;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-    margin: 15px auto;
-    border-radius: 12px;
-}
+    section,
+    .menu {
+        margin: 15px 10px;
+        padding: 16px;
+    }
 
-/* FOTO DE LAS BERENJENAS MÁS PEQUEÑA */
-section img.foto-berenjenas {
-    width: 180px;
-    height: 120px;
+    .plato {
+        font-size: 15px;
+    }
 }
