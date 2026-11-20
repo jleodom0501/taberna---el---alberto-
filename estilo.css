@@ -1,3 +1,4 @@
+
 .prueba {
     color: #FFFFFF;
 }
@@ -92,8 +93,10 @@ section img {
     border-radius: 12px;
 }
 
-/* BERENJENAS MÁS PEQUEÑAS */
-section img.foto-berenjenas {
+/* BERENJENAS, CARRILLADA Y FLAN MÁS PEQUEÑOS */
+section img.foto-berenjenas,
+section img.foto-carrillada,
+section img.foto-flan {
     width: 180px;
     height: 120px;
 }
